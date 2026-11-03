@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Acadêmico - Faculdade Horizonte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="marca">FACULDADE HORIZONTE</div>
+
+        <div class="usuario-topo">
+            Olá, estudante!
+            <span class="avatar">FP</span>
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <aside class="menu">
+            <h3>MENU PRINCIPAL</h3>
+
+            <a href="#" class="menu-link ativo" data-page="inicio">Início</a>
+            <a href="#" class="menu-link" data-page="disciplinas">Minhas disciplinas</a>
+            <a href="#" class="menu-link" data-page="notas">Notas e faltas</a>
+            <a href="#" class="menu-link" data-page="horarios">Horários</a>
+            <a href="#" class="menu-link" data-page="financeiro">Financeiro</a>
+            <a href="#" class="menu-link" data-page="avisos">Avisos</a>
+            <a href="#" class="menu-link" data-page="perfil">Meu cadastro</a>
+            <a href="#" id="sair">Sair do sistema</a>
+        </aside>
+
+        <main class="conteudo">
+
+            <div class="caminho">
+                Você está em: <span id="breadcrumb">Início</span>
+            </div>
+
+            <!-- INÍCIO -->
+            <section class="pagina visivel" id="inicio">
+
+                <h1>Página inicial</h1>
+
+                <p>Bem-vindo ao Portal Acadêmico da Faculdade Horizonte.</p>
+
+                <div class="linha-cards">
+
+                    <div class="card">
+                        <h3>Disciplinas</h3>
+                        <strong>5</strong>
+                        <p>Disciplinas matriculadas</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Notas lançadas</h3>
+                        <strong>3/5</strong>
+                        <p>Consulte suas notas</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Frequência</h3>
+                        <strong>87%</strong>
+                        <p>Frequência geral</p>
+                    </div>
+
+                </div>
+
+                <div class="bloco">
+                    <h2>Informações gerais</h2>
+
+                    <p>Período letivo: 2º semestre de 2026</p>
+                    <p>Curso: Engenharia de Software</p>
+                    <p>RA: 202612345</p>
+                </div>
+
+                <div class="bloco aviso-destaque">
+                    <h2>Último aviso</h2>
+
+                    <p>
+                        <b>ATENÇÃO:</b>
+                        O prazo para renovação de matrícula termina
+                        no dia 20/11/2026.
+                    </p>
+
+                    <button class="botao" data-go="avisos">
+                        Ver todos os avisos
+                    </button>
+                </div>
+
+            </section>
+
+            <!-- DISCIPLINAS -->
+            <section class="pagina" id="disciplinas">
+
+                <h1>Minhas disciplinas</h1>
+
+                <p>
+                    Confira abaixo as matérias em que você está matriculado.
+                </p>
+
+                <div class="bloco">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Disciplina</th>
+                                <th>Professor</th>
+                                <th>Sala</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>ES101</td>
+                                <td>Programação Web</td>
+                                <td>Marcos Lima</td>
+                                <td>Lab 02</td>
+                            </tr>
+
+                            <tr>
+                                <td>ES102</td>
+                                <td>Banco de Dados</td>
+                                <td>Ana Souza</td>
+                                <td>204</td>
+                            </tr>
+
+                            <tr>
+                                <td>ES103</td>
+                                <td>Engenharia de Requisitos</td>
+                                <td>Paulo Reis</td>
+                                <td>105</td>
+                            </tr>
+
+                            <tr>
+                                <td>ES104</td>
+                                <td>Interação Humano-Computador</td>
+                                <td>Carla Mendes</td>
+                                <td>Lab 01</td>
+                            </tr>
+
+                            <tr>
+                                <td>ES105</td>
+                                <td>Estrutura de Dados</td>
+                                <td>Roberto Alves</td>
+                                <td>302</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- NOTAS -->
+            <section class="pagina" id="notas">
+
+                <h1>Notas e faltas</h1>
+
+                <p>
+                    Consulte seu desempenho acadêmico.
+                    Média para aprovação: 6,0.
+                </p>
+
+                <div class="bloco">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Disciplina</th>
+                                <th>Nota 1</th>
+                                <th>Nota 2</th>
+                                <th>Faltas</th>
+                                <th>Situação</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Programação Web</td>
+                                <td>8,0</td>
+                                <td>7,5</td>
+                                <td>2</td>
+                                <td class="ok">Aprovado</td>
+                            </tr>
+
+                            <tr>
+                                <td>Banco de Dados</td>
+                                <td>6,5</td>
+                                <td>--</td>
+                                <td>4</td>
+                                <td class="pendente">Em andamento</td>
+                            </tr>
+
+                            <tr>
+                                <td>Engenharia de Requisitos</td>
+                                <td>5,0</td>
+                                <td>6,0</td>
+                                <td>6</td>
+                                <td class="pendente">Em andamento</td>
+                            </tr>
+
+                            <tr>
+                                <td>Interação Humano-Computador</td>
+                                <td>9,0</td>
+                                <td>--</td>
+                                <td>0</td>
+                                <td class="pendente">Em andamento</td>
+                            </tr>
+
+                            <tr>
+                                <td>Estrutura de Dados</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>2</td>
+                                <td>Sem notas</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <p class="observacao">
+                    * As notas podem sofrer alterações durante o semestre.
+                </p>
+
+            </section>
+
+            <!-- HORÁRIOS -->
+            <section class="pagina" id="horarios">
+
+                <h1>Quadro de horários</h1>
+
+                <p>Horários das aulas - semestre atual.</p>
+
+                <div class="bloco">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dia</th>
+                                <th>19:00 - 19:50</th>
+                                <th>19:50 - 20:40</th>
+                                <th>20:50 - 21:40</th>
+                                <th>21:40 - 22:30</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Segunda</td>
+                                <td colspan="2">Programação Web</td>
+                                <td colspan="2">Banco de Dados</td>
+                            </tr>
+
+                            <tr>
+                                <td>Terça</td>
+                                <td colspan="2">Estrutura de Dados</td>
+                                <td colspan="2">Estrutura de Dados</td>
+                            </tr>
+
+                            <tr>
+                                <td>Quarta</td>
+                                <td colspan="2">IHC</td>
+                                <td colspan="2">Eng. Requisitos</td>
+                            </tr>
+
+                            <tr>
+                                <td>Quinta</td>
+                                <td colspan="2">Banco de Dados</td>
+                                <td colspan="2">Programação Web</td>
+                            </tr>
+
+                            <tr>
+                                <td>Sexta</td>
+                                <td colspan="2">Eng. Requisitos</td>
+                                <td colspan="2">IHC</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- FINANCEIRO -->
+            <section class="pagina" id="financeiro">
+
+                <h1>Área financeira</h1>
+
+                <p>Informações sobre mensalidades e pagamentos.</p>
+
+                <div class="bloco">
+
+                    <h2>Mensalidade - Novembro/2026</h2>
+
+                    <p>Valor: <b>R$ 849,90</b></p>
+                    <p>Vencimento: 10/11/2026</p>
+                    <p>Situação: <span class="pendente">Em aberto</span></p>
+
+                    <button class="botao" id="pagar">
+                        Pagar mensalidade
+                    </button>
+
+                    <p id="mensagem-pagamento" class="mensagem"></p>
+
+                </div>
+
+                <div class="bloco">
+
+                    <h2>Pagamentos anteriores</h2>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mês</th>
+                                <th>Valor</th>
+                                <th>Data do pagamento</th>
+                                <th>Situação</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Outubro/2026</td>
+                                <td>R$ 849,90</td>
+                                <td>08/10/2026</td>
+                                <td class="ok">Pago</td>
+                            </tr>
+
+                            <tr>
+                                <td>Setembro/2026</td>
+                                <td>R$ 849,90</td>
+                                <td>09/09/2026</td>
+                                <td class="ok">Pago</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </section>
+
+            <!-- AVISOS -->
+            <section class="pagina" id="avisos">
+
+                <h1>Mural de avisos</h1>
+
+                <div class="bloco aviso">
+                    <small>02/11/2026 - Secretaria</small>
+                    <h2>Renovação de matrícula</h2>
+                    <p>
+                        O período de renovação de matrícula estará
+                        disponível até 20/11/2026.
+                    </p>
+                </div>
+
+                <div class="bloco aviso">
+                    <small>29/10/2026 - Coordenação</small>
+                    <h2>Semana acadêmica</h2>
+                    <p>
+                        As inscrições para a semana acadêmica
+                        estão abertas na secretaria.
+                    </p>
+                </div>
+
+                <div class="bloco aviso">
+                    <small>25/10/2026 - Biblioteca</small>
+                    <h2>Devolução de livros</h2>
+                    <p>
+                        Verifique a data de devolução dos materiais emprestados.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- PERFIL -->
+            <section class="pagina" id="perfil">
+
+                <h1>Meu cadastro</h1>
+
+                <div class="bloco formulario">
+
+                    <label>Nome completo</label>
+                    <input type="text" value="Felipe Peres">
+
+                    <label>E-mail</label>
+                    <input type="email" value="felipe@email.com">
+
+                    <label>Curso</label>
+                    <input type="text" value="Engenharia de Software" disabled>
+
+                    <label>Telefone</label>
+                    <input type="text" value="(11) 99999-9999">
+
+                    <button class="botao" id="salvar-perfil">
+                        Salvar alterações
+                    </button>
+
+                    <p id="mensagem-perfil" class="mensagem"></p>
+
+                </div>
+
+            </section>
+
+            <footer>
+                Faculdade Horizonte © 2026 |
+                Portal Acadêmico |
+                Em caso de dúvidas, procure a secretaria.
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
